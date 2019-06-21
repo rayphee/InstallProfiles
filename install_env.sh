@@ -5,7 +5,8 @@ declare -a distribution_folders=("tmux" "vim")
 
 echo "Installing Rafi's environment profiles"
 echo "Note: git, curl, and development tools are expected to be already installed"
-echo "Currently supports: nothing"
+echo "The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 6/21/19"
+echo "Currently supports: macOS Mojave+"
 
 if [ ! -x "$(command -v brew)" ]; then
 	echo "Homebrew not found. Installing..."
