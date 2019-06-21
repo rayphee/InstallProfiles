@@ -1,0 +1,36 @@
+pane	Compilers	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/Compilers/rmcc/src	0	vim	:vim parser.y
+pane	Compilers	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/Compilers/rmcc/src	0	vim	:vim parser.y
+pane	Compilers	1	:zsh	1	:*	2	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim includes/yystype.h
+pane	Compilers	1	:zsh	1	:*	2	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim includes/yystype.h
+pane	Compilers	1	:zsh	1	:*	3	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/ysamples/assign3/fn1.out.txt
+pane	Compilers	1	:zsh	1	:*	3	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/ysamples/assign3/fn1.out.txt
+pane	Compilers	1	:zsh	1	:*	4	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/symtester.c
+pane	Compilers	1	:zsh	1	:*	4	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/symtester.c
+pane	Compilers	1	:zsh	1	:*	5	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	1	zsh	:
+pane	Compilers	1	:zsh	1	:*	5	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/ExoSolar	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/ExoSolar	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	2	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	2	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	3	:/Users/rafi/Downloads	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	3	:/Users/rafi/Downloads	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	4	:/usr/local/Cellar	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	4	:/usr/local/Cellar	1	zsh	:
+pane	RBS	1	:zsh	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	1	zsh	:
+pane	RBS	1	:zsh	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	1	zsh	:
+pane	RBS	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	ssh	:ssh pep-purr@the-cat.local -t tmux a
+pane	RBS	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	ssh	:ssh pep-purr@the-cat.local -t tmux a
+pane	RBS	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/atm_workspace/atm_handoffs/documentation	0	zsh	:
+pane	RBS	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/atm_workspace/atm_handoffs/documentation	0	zsh	:
+pane	RBS	1	:zsh	1	:*	4	:/Users/rafi/Downloads/snoo_data	0	zsh	:
+pane	RBS	1	:zsh	1	:*	4	:/Users/rafi/Downloads/snoo_data	0	zsh	:
+pane	RBS	1	:zsh	1	:*	5	:/Users/rafi/Downloads/snoo_data	0	vim	:vim output.txt
+pane	RBS	1	:zsh	1	:*	5	:/Users/rafi/Downloads/snoo_data	0	vim	:vim output.txt
+window	Compilers	1	1	:*	9480,364x24,0,0{121x24,0,0,2,121x24,122,0,3,120x24,244,0[120x14,244,0,4,120x3,244,15,9,120x5,244,19,14]}
+window	QCWindow	1	1	:*	c6ce,490x24,0,0{175x24,0,0,0,104x24,176,0,16,105x24,281,0,22,103x24,387,0,23}
+window	RBS	1	1	:*	6c35,490x94,0,0{245x94,0,0,10,244x94,246,0[244x47,246,0,15,244x46,246,48{144x46,246,48,28,99x46,391,48[99x23,391,48,29,99x22,391,72,30]}]}
+window	Compilers	1	1	:*	9480,364x24,0,0{121x24,0,0,2,121x24,122,0,3,120x24,244,0[120x14,244,0,4,120x3,244,15,9,120x5,244,19,14]}
+window	QCWindow	1	1	:*	c6ce,490x24,0,0{175x24,0,0,0,104x24,176,0,16,105x24,281,0,22,103x24,387,0,23}
+window	RBS	1	1	:*	6c35,490x94,0,0{245x94,0,0,10,244x94,246,0[244x47,246,0,15,244x46,246,48{144x46,246,48,28,99x46,391,48[99x23,391,48,29,99x22,391,72,30]}]}
+state	RBS	QCWindow
+state	RBS	QCWindow

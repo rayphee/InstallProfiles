@@ -1,0 +1,46 @@
+pane	Compilers	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/Compilers/rmcc/src	0	vim	:vim parser.y
+pane	Compilers	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/Compilers/rmcc/src	0	vim	:vim parser.y
+pane	Compilers	1	:zsh	1	:*	2	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim includes/yystype.h
+pane	Compilers	1	:zsh	1	:*	2	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim includes/yystype.h
+pane	Compilers	1	:zsh	1	:*	3	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/ysamples/assign3/fn1.out.txt
+pane	Compilers	1	:zsh	1	:*	3	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/ysamples/assign3/fn1.out.txt
+pane	Compilers	1	:zsh	1	:*	4	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/symtester.c
+pane	Compilers	1	:zsh	1	:*	4	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	0	vim	:vim tests/symtester.c
+pane	Compilers	1	:zsh	1	:*	5	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	1	zsh	:
+pane	Compilers	1	:zsh	1	:*	5	:/Users/rafi/Dropbox/Projects/Compilers/rmcc	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/ExoSolar	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	1	:/Users/rafi/Dropbox/Projects/ExoSolar	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/atm_workspace/atm_handoffs/java_card	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/atm_workspace/atm_handoffs/java_card	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/ghidra_workspace/rx62t-ghidra	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/ghidra_workspace/rx62t-ghidra	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	4	:/usr/local/Cellar	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	4	:/usr/local/Cellar	1	zsh	:
+pane	RBS	1	:zsh	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	RBS	1	:zsh	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	RBS	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/audio_analysis	0	zsh	:
+pane	RBS	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/audio_analysis	0	zsh	:
+pane	RBS	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	RBS	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	RBS	1	:zsh	1	:*	4	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim plot_shake.py
+pane	RBS	1	:zsh	1	:*	4	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim plot_shake.py
+pane	RBS	1	:zsh	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	zsh	:
+pane	RBS	1	:zsh	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	zsh	:
+pane	RBS	1	:zsh	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	1	zsh	:
+pane	RBS	1	:zsh	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	1	zsh	:
+pane	RBS	1	:zsh	1	:*	7	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim find_max.py
+pane	RBS	1	:zsh	1	:*	7	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim find_max.py
+pane	RBS	1	:zsh	1	:*	8	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim output_0.75.txt
+pane	RBS	1	:zsh	1	:*	8	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim output_0.75.txt
+pane	RBS	1	:zsh	1	:*	9	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim 1.5_1.5.tsv
+pane	RBS	1	:zsh	1	:*	9	:/Users/rafi/Documents/RBS/snoo_workspace/shake_data	0	vim	:vim 1.5_1.5.tsv
+pane	RBS	1	:zsh	1	:*	10	:/Users/rafi/Downloads/snoo_data	0	zsh	:
+pane	RBS	1	:zsh	1	:*	10	:/Users/rafi/Downloads/snoo_data	0	zsh	:
+window	Compilers	1	1	:*	6eb1,490x24,0,0{163x24,0,0,2,163x24,164,0,3,162x24,328,0[162x14,328,0,4,162x3,328,15,9,162x5,328,19,14]}
+window	QCWindow	1	1	:*	ae72,547x24,0,0{191x24,0,0,0,118x24,192,0,16,118x24,311,0,22,117x24,430,0,23}
+window	Compilers	1	1	:*	6eb1,490x24,0,0{163x24,0,0,2,163x24,164,0,3,162x24,328,0[162x14,328,0,4,162x3,328,15,9,162x5,328,19,14]}
+window	QCWindow	1	1	:*	ae72,547x24,0,0{191x24,0,0,0,118x24,192,0,16,118x24,311,0,22,117x24,430,0,23}
+window	RBS	1	1	:*	3ab3,547x78,0,0{274x78,0,0[274x39,0,0,10,274x38,0,40,34],272x78,275,0[272x39,275,0,15,272x38,275,40[272x28,275,40{150x28,275,40[150x10,275,40,29,150x17,275,51{89x17,275,51,40,60x17,365,51,41}],60x28,426,40,36,60x28,487,40[60x10,487,40,37,60x17,487,51,39]},272x9,275,69,30]]}
+window	RBS	1	1	:*	3ab3,547x78,0,0{274x78,0,0[274x39,0,0,10,274x38,0,40,34],272x78,275,0[272x39,275,0,15,272x38,275,40[272x28,275,40{150x28,275,40[150x10,275,40,29,150x17,275,51{89x17,275,51,40,60x17,365,51,41}],60x28,426,40,36,60x28,487,40[60x10,487,40,37,60x17,487,51,39]},272x9,275,69,30]]}
+state	RBS	Compilers
+state	RBS	Compilers

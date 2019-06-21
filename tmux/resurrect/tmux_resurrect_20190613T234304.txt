@@ -1,0 +1,42 @@
+pane	2	1	:zsh	1	:*	1	:/Users/rafi	1	zsh	:
+pane	2	1	:zsh	1	:*	1	:/Users/rafi	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	1	:/Users/rafi	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	1	:/Users/rafi	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	4	:/Users/rafi/Downloads/RBSCam	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	4	:/Users/rafi/Downloads/RBSCam	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	7	:/Users/rafi/VirtualBox VMs	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	7	:/Users/rafi/VirtualBox VMs	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 03_hardware_analysis.md
+pane	RBS	1	:[tmux]	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 03_hardware_analysis.md
+pane	RBS	1	:[tmux]	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo/device_scripts	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo/device_scripts	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	4	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	4	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/Anchor_Baby	1	telnet	:telnet 192.168.100.1
+pane	RBS	1	:[tmux]	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/Anchor_Baby	1	telnet	:telnet 192.168.100.1
+pane	RBS	1	:[tmux]	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/Anchor_Baby	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/Anchor_Baby	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	7	:/Users/rafi/Documents/RBS/report_generator	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	7	:/Users/rafi/Documents/RBS/report_generator	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	8	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 07_audio_analysis.md
+pane	RBS	1	:[tmux]	1	:*	8	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 07_audio_analysis.md
+pane	RBS	1	:[tmux]	1	:*	9	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	zsh	:
+pane	RBS	1	:[tmux]	1	:*	9	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	zsh	:
+window	2	1	1	:*	d763,80x23,0,0,24
+window	2	1	1	:*	d763,80x23,0,0,24
+window	QCWindow	1	1	:*	81ea,490x24,0,0{112x24,0,0,0,112x24,113,0[112x12,113,0,7,112x11,113,13,9],131x24,226,0[131x12,226,0,4,131x11,226,13{72x11,226,13,10,58x11,299,13,14}],132x24,358,0,6}
+window	QCWindow	1	1	:*	81ea,490x24,0,0{112x24,0,0,0,112x24,113,0[112x12,113,0,7,112x11,113,13,9],131x24,226,0[131x12,226,0,4,131x11,226,13{72x11,226,13,10,58x11,299,13,14}],132x24,358,0,6}
+window	RBS	1	1	:*	6559,488x92,0,0[490x30,0,0{162x30,0,0,5,162x30,163,0,17,164x30,326,0,3},490x30,0,31{162x30,0,31,19,162x30,163,31,2,164x30,326,31,20},490x32,0,62{162x32,0,62,16,162x32,163,62,1,164x32,326,62,23}]
+window	RBS	1	1	:*	6559,488x92,0,0[490x30,0,0{162x30,0,0,5,162x30,163,0,17,164x30,326,0,3},490x30,0,31{162x30,0,31,19,162x30,163,31,2,164x30,326,31,20},490x32,0,62{162x32,0,62,16,162x32,163,62,1,164x32,326,62,23}]
+state	RBS	QCWindow
+state	RBS	QCWindow

@@ -1,0 +1,17 @@
+pane	QCWindow	1	:[tmux]	1	:*	1	:/Users/rafi	0	zsh	:
+pane	QCWindow	1	:[tmux]	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	1	zsh	:
+pane	QCWindow	1	:[tmux]	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	QCWindow	1	:[tmux]	1	:*	4	:/Users/rafi/Downloads/RBSCam	0	zsh	:
+pane	QCWindow	1	:[tmux]	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	QCWindow	1	:[tmux]	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	QCWindow	1	:[tmux]	1	:*	7	:/Users/rafi/VirtualBox VMs	0	zsh	:
+pane	RBS	1	:ssh	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	vim	:vim device_scripts/test_audio.sh
+pane	RBS	1	:ssh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 03_hardware_analysis.md
+pane	RBS	1	:ssh	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	RBS	1	:ssh	1	:*	4	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	RBS	1	:ssh	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/filesystem_extracts/apps/bin	1	ssh	:ssh pep-purr@the-cat.local -t tmux a
+pane	RBS	1	:ssh	1	:*	6	:/Users/rafi/Documents/RBS/report_generator	0	zsh	:
+pane	RBS	1	:ssh	1	:*	7	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 07_audio_analysis.md
+window	QCWindow	1	1	:*	81ea,490x24,0,0{112x24,0,0,0,112x24,113,0[112x12,113,0,7,112x11,113,13,9],131x24,226,0[131x12,226,0,4,131x11,226,13{72x11,226,13,10,58x11,299,13,14}],132x24,358,0,6}
+window	RBS	1	1	:*	66d6,490x94,0,0{244x94,0,0[244x47,0,0{122x47,0,0,5,121x47,123,0,17},244x46,0,48{122x46,0,48,3,121x46,123,48,18}],245x94,245,0[245x47,245,0{122x47,245,0,2,122x47,368,0,16},245x46,245,48,1]}
+state	RBS	QCWindow

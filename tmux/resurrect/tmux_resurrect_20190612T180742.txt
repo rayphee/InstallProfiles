@@ -1,0 +1,18 @@
+pane	QCWindow	1	:zsh	1	:*	1	:/Users/rafi	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	4	:/Users/rafi/Downloads/RBSCam	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	1	zsh	:
+pane	QCWindow	1	:zsh	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	QCWindow	1	:zsh	1	:*	7	:/Users/rafi/VirtualBox VMs	0	zsh	:
+pane	RBS	1	:telnet	1	:*	1	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	vim	:vim device_scripts/test_audio.sh
+pane	RBS	1	:telnet	1	:*	2	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 03_hardware_analysis.md
+pane	RBS	1	:telnet	1	:*	3	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo/device_scripts	0	zsh	:
+pane	RBS	1	:telnet	1	:*	4	:/Users/rafi/Documents/RBS/snoo_workspace/collected_data/shake	0	zsh	:
+pane	RBS	1	:telnet	1	:*	5	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	1	telnet	:telnet 192.168.100.1
+pane	RBS	1	:telnet	1	:*	6	:/Users/rafi/Documents/RBS/snoo_workspace/death_by_snoo_snoo	0	zsh	:
+pane	RBS	1	:telnet	1	:*	7	:/Users/rafi/Documents/RBS/report_generator	0	zsh	:
+pane	RBS	1	:telnet	1	:*	8	:/Users/rafi/Documents/RBS/snoo_workspace/Snoo_Analysis/notes	0	vim	:vim 07_audio_analysis.md
+window	QCWindow	1	1	:*	81ea,490x24,0,0{112x24,0,0,0,112x24,113,0[112x12,113,0,7,112x11,113,13,9],131x24,226,0[131x12,226,0,4,131x11,226,13{72x11,226,13,10,58x11,299,13,14}],132x24,358,0,6}
+window	RBS	1	1	:*	32d9,490x94,0,0{198x94,0,0[198x47,0,0{170x47,0,0,5,27x47,171,0,17},198x46,0,48{134x46,0,48,3,63x46,135,48,19}],291x94,199,0[291x47,199,0{114x47,199,0,2,60x47,314,0,20,115x47,375,0,16},291x46,199,48,1]}
+state	RBS	QCWindow
