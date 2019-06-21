@@ -47,6 +47,7 @@ sh install.sh --unattended
 cp agnoster-simple.zsh-theme ~/.oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+rm -rf install.sh # GDI Oh My Zsh why're you leaving your trash here?
 
 echo "Installing fonts..."
 cp fonts/operator_mono/* ~/Library/Fonts
