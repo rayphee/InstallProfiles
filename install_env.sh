@@ -64,3 +64,5 @@ echo "Applying profile changes..."
 tmux source ~/.tmux.conf
 
 chsh -s $(which zsh)
+
+exit 0
