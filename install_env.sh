@@ -116,7 +116,7 @@ run_generic_setup (){
 }
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-	echo "Linux-based detected"
+	echo "Linux-based OS detected"
 	run_ubuntu_setup
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "Darwin-based OS detected"
