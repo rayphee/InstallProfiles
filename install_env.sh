@@ -7,9 +7,12 @@ declare -a missing_programs=()
 echo "Installing Rafi's environment profiles"
 echo "Note: git, curl, and development tools are expected to be already installed"
 echo "The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/18/19"
-echo "Currently supports: macOS Mojave+"
+echo "Currently supports:"
 echo "	macOS (Tested on Mojave)"
 echo "	Linux (Tested on Ubuntu 20.04 LTS, Debian based only)"
+
+# TODO: Add getopts parsing for optional environment installation
+# TODO: Add support for other Linux distros
 
 if [ ! -x "$(command -v tmux)" ]; then
 	missing_programs+=("tmux")
@@ -39,7 +42,6 @@ run_mac_setup () {
 
 	echo "Installing fonts..."
 	cp fonts/operator_mono/* ~/Library/Fonts
-	
 
 	run_generic_setup
 }
@@ -50,8 +52,10 @@ run_ubuntu_setup () {
 	fi
 
 	echo "Installing fonts..."
-	if [ ! -d "~/.fonts" ]; then
+	if [ ! -d ~/.fonts ]; then
 		mkdir ~/.fonts
+	fi
+	if [ ! -d ~/.fonts/operator_mono ]; then
 		cp -r fonts/operator_mono/ ~/.fonts/
 	fi
 
@@ -62,24 +66,39 @@ run_generic_setup (){
 	echo "Copying distribution folders..."
 	for i in "${distribution_folders[@]}"
 	do
-		tar -xzf $i.tgz -C ~
-		mv ~/$i ~/.$i
+		if [ -d ~/.$i ]; then
+			echo "Found an existing .$i folder"
+			echo "This version does not have a force overwrite option"
+			echo "Skipping .$i"
+		else
+			tar -xzf $i.tgz -C ~
+			mv ~/$i ~/.$i
+		fi
 	done
 	
-	echo "Installing TPM..."
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	if [ ! -d ~/.tmux/plugins/tpm ]; then
+		echo "Did not find a TPM installation"
+		echo "Installing TPM..."
+		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	fi
 	
-	echo "Installing Oh My Zsh..."
-	curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-	sh install.sh --unattended
-	cp agnoster-simple.zsh-theme ~/.oh-my-zsh/themes
-	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	rm -rf install.sh # GDI Oh My Zsh why're you leaving your trash here?
+	if [ ! -d ~/.oh-my-zsh ]; then
+		echo "Did not find a Oh My Zsh installation"
+		echo "Installing Oh My Zsh..."
+		curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+		sh install.sh --unattended
+		cp agnoster-simple.zsh-theme ~/.oh-my-zsh/themes
+		git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+		rm -rf install.sh # GDI Oh My Zsh why're you leaving your trash here?
+	fi
 	
-	echo "Installing Vundle..."
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	pip3 install --user powerline-status
+	if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+		echo "Did not find Vundle installation"
+		echo "Installing Vundle..."
+		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+		pip3 install --user powerline-status
+	fi
 	
 	echo "Copying configuration files..."
 	for i in "${configuration_files[@]}"
@@ -90,6 +109,7 @@ run_generic_setup (){
 	echo "Applying profile changes..."
 	tmux source ~/.tmux.conf
 	
+	echo "Changing default shell to Zsh (Will prompt for password"
 	chsh -s $(which zsh)
 	
 	exit 0
