@@ -4,15 +4,16 @@ declare -a configuration_files=("tmux.conf" "vimrc" "zshrc")
 declare -a distribution_folders=("tmux" "vim")
 declare -a missing_programs=()
 
+PACKAGE_MANAGER_COMMAND="sudo apt"
+
 echo "Installing Rafi's environment profiles"
 echo "Note: git, curl, and development tools are expected to be already installed"
-echo "The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/18/19"
+echo "The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/20/20"
 echo "Currently supports:"
 echo "	macOS (Tested on Mojave)"
-echo "	Linux (Tested on Ubuntu 20.04 LTS, Debian based only)"
+echo "	Linux (Tested on Ubuntu 20.04 LTS, should support Arch and Red Hat based systems)"
 
 # TODO: Add getopts parsing for optional environment installation
-# TODO: Add support for other Linux distros
 
 if [ ! -x "$(command -v tmux)" ]; then
 	missing_programs+=("tmux")
@@ -46,9 +47,9 @@ run_mac_setup () {
 	run_generic_setup
 }
 
-run_ubuntu_setup () {
+run_linux_setup () {
 	if [ ! -z "$missing_programs" ]; then
-		sudo apt install ${missing_programs[@]} -y
+		$PACKAGE_MANAGER_COMMAND ${missing_programs[@]}
 	fi
 
 	echo "Installing fonts..."
@@ -117,7 +118,23 @@ run_generic_setup (){
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "Linux-based OS detected"
-	run_ubuntu_setup
+	if [ ! -x "$(command -v apt)" ]; then
+		PACKAGE_MANAGER_COMMAND="sudo apt install -y"
+		sudo apt update
+		run_linux_setup
+	elif [ ! -x "$(command -v yum)" ]; then
+		PACKAGE_MANAGER_COMMAND="yum -y install"
+		run_linux_setup
+	elif [ ! -x "$(command -v pacman)" ]; then
+		PACKAGE_MANAGER_COMMAND="pacman -S"
+		pacman -Syu
+		run_linux_setup
+	else
+		echo "No supported package manager found"
+		echo "Install ${missing_programs[@]} using your distro's package manager"
+		echo "Proceeding with generic installation"
+		run_generic_setup
+	fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "Darwin-based OS detected"
 	run_mac_setup
