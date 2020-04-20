@@ -5,15 +5,41 @@ declare -a distribution_folders=("tmux" "vim")
 declare -a missing_programs=()
 
 PACKAGE_MANAGER_COMMAND="sudo apt"
+FORCE_INSTALL=false
 
-echo "Installing Rafi's environment profiles"
-echo "Note: git, curl, and development tools are expected to be already installed"
-echo "The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/20/20"
-echo "Currently supports:"
-echo "	macOS (Tested on Mojave)"
-echo "	Linux (Tested on Ubuntu 20.04 LTS, should support Arch and Red Hat based systems)"
-
-# TODO: Add getopts parsing for optional environment installation
+while getopts ":hfcv" opt; do
+	case ${opt} in
+		h )	echo "Usage:"
+			echo "  install_env [options]"
+			echo "Options:"
+			echo "  -h		Show this help message."
+			echo "  -c		Install only configuration files."
+			echo "  -f		Overwrite all existing configuration files."
+			echo "  -v		Check version and compatibilty for this install script."
+			exit 0
+			;;
+		f )	FORCE_INSTALL=true
+			echo "Overwriting existing configuration files"
+			;;
+		C )	echo "Installing only configuration files"
+			run_generic_setup
+			;;
+		v )	echo "Install Environment Profiles R20.04.20"
+			echo ""
+			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script automatically installs them. For macOS, there is no default package manager. This script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/20/20."
+			echo ""
+			echo "Note: git, curl, and development tools are expected to be already installed."
+			echo ""
+			echo "Currently supports:"
+			echo "	macOS (Tested on Mojave)"
+			echo "	Linux (Tested on Ubuntu 20.04 LTS, should support Arch and Red Hat based systems)"
+			exit 0
+			;;
+		\? )	echo "Usage: cmd [-hv] [-fc]"
+			exit -1
+			;;
+	esac
+done
 
 if [ ! -x "$(command -v tmux)" ]; then
 	missing_programs+=("tmux")
@@ -68,9 +94,15 @@ run_generic_setup (){
 	for i in "${distribution_folders[@]}"
 	do
 		if [ -d ~/.$i ]; then
-			echo "Found an existing .$i folder"
-			echo "This version does not have a force overwrite option"
-			echo "Skipping .$i"
+			if [ "$FORCE_INSTALL" = true ]; then
+				echo "Overwriting .$i folder"
+				rm -rf ~/.$i
+				tar -xzf $i.tgz -C ~
+				mv ~/$i ~/.$i
+			else
+				echo "Found an existing .$i folder and force flag was not set"
+				echo "Skipping .$i"
+			fi
 		else
 			tar -xzf $i.tgz -C ~
 			mv ~/$i ~/.$i
@@ -109,9 +141,15 @@ run_generic_setup (){
 	
 	echo "Applying profile changes..."
 	tmux source ~/.tmux.conf
-	
-	echo "Changing default shell to Zsh (Will prompt for password"
-	chsh -s $(which zsh)
+	if [ ${SHELL} != $(which zsh) ]; then
+		echo "Changing default shell to Zsh (Will prompt for password)"
+		chsh -s $(which zsh)
+		echo "Installation complete!"
+		echo "To finalize changes, log out and back in to use Zsh as the default shell"
+		exit 0
+	fi
+
+	echo "Installation complete!"
 	
 	exit 0
 }
