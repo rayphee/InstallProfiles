@@ -32,7 +32,7 @@ while getopts ":hfcv" opt; do
 			echo ""
 			echo "Currently supports:"
 			echo "	macOS (Tested on Mojave)"
-			echo "	Linux (Tested on Ubuntu 19.10, 20.04 LTS, should support Arch and Red Hat based systems)"
+			echo "	Linux (Tested on Ubuntu 19.10, 20.04 LTS, Arch stubs are built in, but not confirmed to work)"
 			exit 0
 			;;
 		\? )	echo "Usage: cmd [-hv] [-fc]"
@@ -49,9 +49,6 @@ if [ ! -x "$(command -v zsh)" ]; then
 fi
 if [ ! -x "$(command -v vim)" ]; then
 	missing_programs+=("vim")
-fi
-if [ ! -x "$(command -v pip3)" ]; then
-	missing_programs+=("python3-pip")
 fi
 
 run_mac_setup () {
@@ -164,14 +161,23 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "Linux-based OS detected"
 	if [ -x "$(command -v apt)" ]; then
 		PACKAGE_MANAGER_COMMAND="sudo apt install -y"
+		if [ ! -x "$(command -v pip3)" ]; then
+			missing_programs+=("python3-pip")
+		fi
 		sudo apt update
 		run_linux_setup
 	elif [ -x "$(command -v yum)" ]; then
 		PACKAGE_MANAGER_COMMAND="yum -y install"
+		if [ ! -x "$(command -v pip3)" ]; then
+			missing_programs+=("python3-pip")
+		fi
 		run_linux_setup
 	elif [ -x "$(command -v pacman)" ]; then
 		PACKAGE_MANAGER_COMMAND="sudo pacman -S"
-		sudo pacman -Syu
+		if [ ! -x "$(command -v pip3)" ]; then
+			missing_programs+=("python-pip")
+		fi
+		sudo pacman -S python python-setuptools
 		run_linux_setup
 	else
 		echo "No supported package manager found"
@@ -181,6 +187,9 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "Darwin-based OS detected"
+	if [ ! -x "$(command -v pip3)" ]; then
+		missing_programs+=("python3")
+	fi
 	run_mac_setup
 else
         echo "Unsupported OS detected"
