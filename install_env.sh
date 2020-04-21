@@ -61,6 +61,8 @@ run_mac_setup () {
 	fi
 	
 	brew update
+
+	missing_programs+=("vim")  # macOS's default vim doesn't support python3... tsk tsk tsk
 	
 	for i in "${missing_programs[@]}"
 	do
