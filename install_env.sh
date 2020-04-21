@@ -168,7 +168,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 		PACKAGE_MANAGER_COMMAND="yum -y install"
 		run_linux_setup
 	elif [ ! -x "$(command -v pacman)" ]; then
-		PACKAGE_MANAGER_COMMAND="pacman -S"
+		PACKAGE_MANAGER_COMMAND="sudo pacman -S"
 		pacman -Syu
 		run_linux_setup
 	else
