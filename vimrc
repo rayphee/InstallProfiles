@@ -53,7 +53,6 @@ set laststatus=2
 set noshowmode
 let g:solarized_termcolors=256
 set background=dark
-colorscheme afterglow
 " hi normal guibg=NONE ctermbg=NONE
 set mouse=a
 set rnu

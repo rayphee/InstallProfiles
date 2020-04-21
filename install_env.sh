@@ -32,7 +32,7 @@ while getopts ":hfcv" opt; do
 			echo ""
 			echo "Currently supports:"
 			echo "	macOS (Tested on Mojave)"
-			echo "	Linux (Tested on Ubuntu 20.04 LTS, should support Arch and Red Hat based systems)"
+			echo "	Linux (Tested on Ubuntu 19.10, 20.04 LTS, should support Arch and Red Hat based systems)"
 			exit 0
 			;;
 		\? )	echo "Usage: cmd [-hv] [-fc]"
@@ -132,7 +132,6 @@ run_generic_setup (){
 		echo "Did not find Vundle installation"
 		echo "Installing Vundle..."
 		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-		vim +PluginInstall +qall
 	fi
 
 	pip3 install --user powerline-status
@@ -142,10 +141,13 @@ run_generic_setup (){
 	do
 		cp $i ~/.$i
 	done
+
+	vim +PluginInstall +qall
+	echo 'colorscheme afterglow' >> ~/.vimrc
 	
 	echo "Applying profile changes..."
 	tmux source ~/.tmux.conf
-	if [ ${SHELL} != $(which zsh) ]; then
+	if [[ ${SHELL} != $(which zsh) ]]; then
 		echo "Changing default shell to Zsh (Will prompt for password)"
 		chsh -s $(which zsh)
 		echo "Installation complete!"
@@ -160,14 +162,14 @@ run_generic_setup (){
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "Linux-based OS detected"
-	if [ ! -x "$(command -v apt)" ]; then
+	if [ -x "$(command -v apt)" ]; then
 		PACKAGE_MANAGER_COMMAND="sudo apt install -y"
 		sudo apt update
 		run_linux_setup
-	elif [ ! -x "$(command -v yum)" ]; then
+	elif [ -x "$(command -v yum)" ]; then
 		PACKAGE_MANAGER_COMMAND="yum -y install"
 		run_linux_setup
-	elif [ ! -x "$(command -v pacman)" ]; then
+	elif [ -x "$(command -v pacman)" ]; then
 		PACKAGE_MANAGER_COMMAND="sudo pacman -S"
 		sudo pacman -Syu
 		run_linux_setup
