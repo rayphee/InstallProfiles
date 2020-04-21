@@ -169,7 +169,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 		run_linux_setup
 	elif [ ! -x "$(command -v pacman)" ]; then
 		PACKAGE_MANAGER_COMMAND="sudo pacman -S"
-		pacman -Syu
+		sudo pacman -Syu
 		run_linux_setup
 	else
 		echo "No supported package manager found"
