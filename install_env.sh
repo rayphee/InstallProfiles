@@ -24,9 +24,9 @@ while getopts ":hfcv" opt; do
 		C )	echo "Installing only configuration files"
 			run_generic_setup
 			;;
-		v )	echo "Install Environment Profiles R20.04.20"
+		v )	echo "Install Environment Profiles R20.04.21"
 			echo ""
-			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script automatically installs them. For macOS, there is no default package manager. This script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/20/20."
+			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script automatically installs them. For macOS, there is no default package manager. This script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/21/20."
 			echo ""
 			echo "Note: git, curl, and development tools are expected to be already installed."
 			echo ""
@@ -130,8 +130,10 @@ run_generic_setup (){
 		echo "Did not find Vundle installation"
 		echo "Installing Vundle..."
 		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-		pip3 install --user powerline-status
+		vim +PluginInstall +qall
 	fi
+
+	pip3 install --user powerline-status
 	
 	echo "Copying configuration files..."
 	for i in "${configuration_files[@]}"
