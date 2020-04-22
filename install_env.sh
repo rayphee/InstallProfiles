@@ -31,11 +31,11 @@ while getopts ":hfcv" opt; do
 			echo "Note: git, curl, and development tools are expected to be already installed."
 			echo ""
 			echo "Currently supports:"
-			echo "	macOS: 10.14+ (Tested on Mojave)"
-			echo "	Linux: Ubuntu 19.04+ (Tested on Ubuntu 19.10, 20.04 LTS, and Arch)"
+			echo "  macOS: 10.14+ (Tested on Mojave)"
+			echo "  Linux: Ubuntu 19.04+ (Tested on Ubuntu 19.10, 20.04 LTS, and Arch)"
 			echo ""
 			echo "Known issues:"
-			echo "	Installations on Ubuntu 14.04 LTS have limited support in vim; python3 support is not built in, so powerline might need to be disabled. Please note that Ubuntu 14.04 LTS is not technically supported due to this reason, but the installer will still try to proceed"
+			echo "  Installations on Ubuntu 14.04 LTS have no support for powerline in vim due to lack of built in python3 support. Note: Ubuntu 14.04 LTS is not technically supported due to this reason, but the installer will still try to proceed"
 			exit 0
 			;;
 		\? )	echo "Usage: cmd [-hv] [-fc]"
