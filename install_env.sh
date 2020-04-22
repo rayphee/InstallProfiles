@@ -178,6 +178,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 			missing_programs+=("python-pip")
 		fi
 		sudo pacman -S python python-setuptools
+		sudo pacman -Rncs grml-zsh-config  # Arch has some stupid config mechanism pre-built for Zsh; let's get rid of it:
 		run_linux_setup
 	else
 		echo "No supported package manager found"
