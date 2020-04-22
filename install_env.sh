@@ -24,15 +24,15 @@ while getopts ":hfcv" opt; do
 		C )	echo "Installing only configuration files"
 			run_generic_setup
 			;;
-		v )	echo "Install Environment Profiles R20.04.21"
+		v )	echo "Install Environment Profiles R20.04.22"
 			echo ""
-			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script automatically installs them. For macOS, there is no default package manager. This script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/21/20."
+			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script automatically installs them. For macOS, there is no default package manager. This script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/22/20."
 			echo ""
 			echo "Note: git, curl, and development tools are expected to be already installed."
 			echo ""
 			echo "Currently supports:"
 			echo "	macOS (Tested on Mojave)"
-			echo "	Linux (Tested on Ubuntu 19.10, 20.04 LTS, Arch stubs are built in, but not confirmed to work)"
+			echo "	Linux (Tested on Ubuntu 19.10, 20.04 LTS, and Arch)"
 			exit 0
 			;;
 		\? )	echo "Usage: cmd [-hv] [-fc]"
