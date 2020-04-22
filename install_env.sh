@@ -26,13 +26,16 @@ while getopts ":hfcv" opt; do
 			;;
 		v )	echo "Install Environment Profiles R20.04.22"
 			echo ""
-			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script automatically installs them. For macOS, there is no default package manager. This script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/22/20."
+			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script tries to automatically install them. For macOS, there is no default package manager; this script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/22/20."
 			echo ""
 			echo "Note: git, curl, and development tools are expected to be already installed."
 			echo ""
 			echo "Currently supports:"
-			echo "	macOS (Tested on Mojave)"
-			echo "	Linux (Tested on Ubuntu 19.10, 20.04 LTS, and Arch)"
+			echo "	macOS: 10.14+ (Tested on Mojave)"
+			echo "	Linux: Ubuntu 19.04+ (Tested on Ubuntu 19.10, 20.04 LTS, and Arch)"
+			echo ""
+			echo "Known issues:"
+			echo "	Installations on Ubuntu 14.04 LTS have limited support in vim; python3 support is not built in, so powerline might need to be disabled. Please note that Ubuntu 14.04 LTS is not technically supported due to this reason, but the installer will still try to proceed"
 			exit 0
 			;;
 		\? )	echo "Usage: cmd [-hv] [-fc]"
