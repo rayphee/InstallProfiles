@@ -22,7 +22,9 @@ while getopts ":hfcv" opt; do
 			echo "Overwriting existing configuration files"
 			;;
 		C )	echo "Installing only configuration files"
-			run_generic_setup
+			install_configuration_files
+			apply_profile_changes
+			exit 0
 			;;
 		v )	echo "Install Environment Profiles R20.04.22"
 			echo ""
@@ -54,7 +56,7 @@ if [ ! -x "$(command -v vim)" ]; then
 	missing_programs+=("vim")
 fi
 
-run_mac_setup () {
+mac_setup () {
 	if [ ! -x "$(command -v brew)" ]; then
 		echo "Homebrew not found. Installing..."
 		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -72,10 +74,13 @@ run_mac_setup () {
 	echo "Installing fonts..."
 	cp fonts/operator_mono/* ~/Library/Fonts
 
-	run_generic_setup
+	install_plugin_managers
+	install_configuration_files  # After this, we likely want to apply a diff to make certain features specific to mac
+	apply_profile_changes
+	exit 0
 }
 
-run_linux_setup () {
+linux_setup () {
 	if [ ! -z "$missing_programs" ]; then
 		$PACKAGE_MANAGER_COMMAND ${missing_programs[@]}
 	fi
@@ -88,10 +93,13 @@ run_linux_setup () {
 		cp -r fonts/operator_mono/ ~/.fonts/
 	fi
 
-	run_generic_setup
+	install_plugin_managers
+	install_configuration_files  # After this, we likely want to apply a diff to make certain features specific to linux
+	apply_profile_changes
+	exit 0
 }
 
-run_generic_setup (){
+install_plugin_managers () {
 	echo "Copying distribution folders..."
 	for i in "${distribution_folders[@]}"
 	do
@@ -135,16 +143,9 @@ run_generic_setup (){
 	fi
 
 	pip3 install --user powerline-status
+}
 	
-	echo "Copying configuration files..."
-	for i in "${configuration_files[@]}"
-	do
-		cp $i ~/.$i
-	done
-
-	vim +PluginInstall +qall
-	echo 'colorscheme afterglow' >> ~/.vimrc
-	
+apply_profile_changes () {
 	echo "Applying profile changes..."
 	tmux source ~/.tmux.conf
 	if [[ ${SHELL} != $(which zsh) ]]; then
@@ -156,10 +157,19 @@ run_generic_setup (){
 	fi
 
 	echo "Installation complete!"
-	
-	exit 0
 }
 
+install_configuration_files () {
+	echo "Copying configuration files..."
+	for i in "${configuration_files[@]}"
+	do
+		cp $i ~/.$i
+	done
+
+	vim +PluginInstall +qall
+	echo 'colorscheme afterglow' >> ~/.vimrc
+}
+	
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "Linux-based OS detected"
 	if [ -x "$(command -v apt)" ]; then
@@ -168,13 +178,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 			missing_programs+=("python3-pip")
 		fi
 		sudo apt update
-		run_linux_setup
+		linux_setup
 	elif [ -x "$(command -v yum)" ]; then
 		PACKAGE_MANAGER_COMMAND="yum -y install"
 		if [ ! -x "$(command -v pip3)" ]; then
 			missing_programs+=("python3-pip")
 		fi
-		run_linux_setup
+		linux_setup
 	elif [ -x "$(command -v pacman)" ]; then
 		PACKAGE_MANAGER_COMMAND="sudo pacman -S"
 		if [ ! -x "$(command -v pip3)" ]; then
@@ -182,7 +192,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 		fi
 		sudo pacman -S python python-setuptools
 		sudo pacman -Rncs grml-zsh-config  # Arch has some stupid config mechanism pre-built for Zsh; let's get rid of it:
-		run_linux_setup
+		linux_setup
 	else
 		echo "No supported package manager found"
 		echo "Install ${missing_programs[@]} using your distro's package manager"
@@ -194,7 +204,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	if [ ! -x "$(command -v pip3)" ]; then
 		missing_programs+=("python3")
 	fi
-	run_mac_setup
+	mac_setup
 else
         echo "Unsupported OS detected"
 	echo "Aborting environment setup"
