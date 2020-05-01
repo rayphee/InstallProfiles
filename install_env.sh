@@ -151,6 +151,8 @@ install_plugin_managers () {
 apply_profile_changes () {
 	echo "Applying profile changes..."
 	tmux source ~/.tmux.conf
+	echo "Installing Tmux plugins"
+	~/.tmux/plugins/tpm/bin/install_plugins
 	if [[ ${SHELL} != $(which zsh) ]]; then
 		echo "Changing default shell to Zsh (Will prompt for password)"
 		chsh -s $(which zsh)
