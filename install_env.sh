@@ -78,12 +78,18 @@ mac_setup () {
 	cp fonts/operator_mono/* ~/Library/Fonts
 
 	install_plugin_managers
-	install_configuration_files  # After this, we likely want to apply a diff to make certain features specific to mac
+	install_configuration_files
+	patch ~/.tmux.conf patch/tmux_mac.patch
 	apply_profile_changes
 	exit 0
 }
 
 linux_setup () {
+
+	if [ ! -x "$(command -v xclip)" ]; then
+		missing_programs+=("xclip")
+	fi
+
 	if [ ! -z "$missing_programs" ]; then
 		$PACKAGE_MANAGER_COMMAND ${missing_programs[@]}
 	fi
@@ -97,7 +103,8 @@ linux_setup () {
 	fi
 
 	install_plugin_managers
-	install_configuration_files  # After this, we likely want to apply a diff to make certain features specific to linux
+	install_configuration_files
+	patch ~/.tmux.conf patch/tmux_linux.patch
 	apply_profile_changes
 	exit 0
 }

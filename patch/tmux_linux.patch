@@ -1,0 +1,4 @@
+69a70
+> bind-key -T copy-mode-vi y send-keys -X copy-pipe "xclip -i -f -selection primary | xclip -i -selection clipboard"
+72a74
+> bind-key -T copy-mode-vi Enter send-keys -X copy-pipe "xclip -i -f -selection primary | xclip -i -selection clipboard"
