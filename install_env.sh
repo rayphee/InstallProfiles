@@ -26,7 +26,7 @@ while getopts ":hfcv" opt; do
 			apply_profile_changes
 			exit 0
 			;;
-		v )	echo "Install Environment Profiles R20.04.22"
+		v )	echo "Install Environment Profiles R20.04.25"
 			echo ""
 			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script tries to automatically install them. For macOS, there is no default package manager; this script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/22/20."
 			echo ""
