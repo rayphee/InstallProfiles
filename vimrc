@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'rafi/awesome-vim-colorschemes' " not actually me, unfortunately
 Plugin 'tpope/vim-fugitive'
 Plugin 'wincent/command-t'
+Plugin 'severin-lemaignan/vim-minimap'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,6 +35,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 syntax on
+let g:minimap_highlight = 'Visual'
 set number
 set guifont=Operator\ Mono\ Medium\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
