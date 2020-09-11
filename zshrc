@@ -69,6 +69,7 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
+  sudo
 )
 
 source $ZSH/oh-my-zsh.sh
