@@ -182,12 +182,12 @@ install_configuration_files () {
 	echo 'colorscheme afterglow' >> ~/.vimrc
 }
 	
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OSTYPE" == linux-gnu* ]]; then
 	echo "Linux-based OS detected"
 	if [ -x "$(command -v apt)" ]; then
 		PACKAGE_MANAGER_COMMAND="sudo apt install -y"
 		if [ ! -x "$(command -v pip3)" ]; then
-			missing_programs+=("python3-pip")
+			missing_programs+=("python3-pip vim-gtk") # vim-gtk guaranteed to have +python3
 		fi
 		sudo apt update
 		linux_setup
