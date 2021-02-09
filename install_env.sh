@@ -26,9 +26,9 @@ while getopts ":hfcv" opt; do
 			apply_profile_changes
 			exit 0
 			;;
-		v )	echo "Install Environment Profiles R20.04.30"
+		v )	echo "Install Environment Profiles R21.02.09"
 			echo ""
-			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script tries to automatically install them. For macOS, there is no default package manager; this script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 4/30/20."
+			echo "This script sets up the terminal environment to Rafi's configuration. If the base programs (tmux, zsh, pip3, and vim) are not installed, this script tries to automatically install them. For macOS, there is no default package manager; this script assumes users will use Homebrew as the macOS package manager; therefore, it treats Homebrew as a base program and installs it if not found. The configuration profiles are written to comply with the latest versions of brew, tmux, zsh, and vim as of 2/09/21."
 			echo ""
 			echo "Requirements:"
 			echo "  Git"
@@ -37,7 +37,7 @@ while getopts ":hfcv" opt; do
 			echo ""
 			echo "Currently supports:"
 			echo "  macOS: 10.14+ (Tested on Mojave)"
-			echo "  Linux: Ubuntu 19.04+ (Tested on Ubuntu 19.10, 20.04 LTS, and Arch)"
+			echo "  Linux: Ubuntu 19.04+ (Tested on Ubuntu 19.10, 20.04 LTS, Arch, Raspbian Buster)"
 			echo ""
 			echo "Known issues:"
 			echo "  Installations on Ubuntu 14.04 LTS have no support for powerline in vim due to lack of built in python3 support. Note: Ubuntu 14.04 LTS is not technically supported due to this reason, but the installer will still try to proceed"
