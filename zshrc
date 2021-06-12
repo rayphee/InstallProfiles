@@ -107,6 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # autoload -U promptinit; promptinit
 # prompt pure
 
+bindkey -v
+
 [[ $- != *i* ]] && return
 if [ -z "$SSH_TTY" ]; then
 	if [[ -z "$TMUX" ]];then
