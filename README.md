@@ -7,4 +7,4 @@ One install package that sets up a terminal environment to my liking. Really han
 Currently, the following OS's are supported:
 
 - macOS (Tested on Mojave)
-- Linux (Tested on Ubuntu 19.10, 20.04 LTS)
+- Linux (Tested on Ubuntu 19.10, 20.04 LTS, Raspbian Buster)
