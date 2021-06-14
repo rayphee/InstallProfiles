@@ -67,12 +67,17 @@ export ZSH_THEME="agnoster-simple"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-syntax-highlighting
+  vi-mode
   sudo
 )
 
 source $ZSH/oh-my-zsh.sh
+
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+MODE_INDICATOR="%F{green}\ue0b2%f%K{green}%F{black}[NORMAL]%f%k"
+export KEYTIMEOUT=1
 # source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
